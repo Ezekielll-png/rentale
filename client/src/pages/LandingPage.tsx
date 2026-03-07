@@ -118,9 +118,9 @@ export function LandingPage() {
           </div>
           <Button
             asChild
-            className="bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full px-6 font-poppins font-medium shadow-sm hover:shadow transition-all"
+            className="bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full px-2 font-poppins font-medium shadow-sm hover:shadow transition-all"
           >
-            <a href="#neutrality-notice">Get Started</a>
+            <a href="#neutrality-notice">Create your Rentale Performance Report</a>
           </Button>
         </div>
       </nav>
@@ -165,7 +165,7 @@ export function LandingPage() {
                   className="w-full sm:w-auto bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full px-8 h-14 text-base font-poppins font-medium shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5"
                 >
                   <a href="#neutrality-notice">
-                    Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                    Create your Rentale Performance Report <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
                 <Button
@@ -217,7 +217,7 @@ export function LandingPage() {
                 {
                   step: "03",
                   title: "Rental Performance Report",
-                  desc: "Receive and share a trusted rental performance record with landlords and tenants.",
+                  desc: "Receive and share your Rental Performance Report.",
                   icon: <ShieldCheck className="w-6 h-6 text-[#1E3A8A]" />,
                 },
               ].map((item, i) => (
@@ -263,7 +263,7 @@ export function LandingPage() {
               {[
                 {
                   title: "Rental Payment Reliability",
-                  desc: "Clear historical data on on-time payments, late instances, and overall consistency over time.",
+                  desc: "Historical data on payments, patterns, and overall consistency over time.",
                   icon: <CheckCircle2 className="w-7 h-7" />,
                 },
                 {
@@ -278,7 +278,7 @@ export function LandingPage() {
                 },
                 {
                   title: "Neutral Performance Indicators",
-                  desc: "Objective metrics like property care assessments and communication responsiveness ratings.",
+                  desc: "Objective metrics like property care assessments and communication responsiveness.",
                   icon: <Activity className="w-7 h-7" />,
                 },
               ].map((card, i) => (
@@ -315,8 +315,11 @@ export function LandingPage() {
                 Neutrality Notice
               </h3>
               <p className="text-[#1E3A8A] font-medium font-inter">
-                Rentale provides neutral, structured reports. We do not rank
-                users, and we do not make rental decisions.
+                Rentale is a neutral platform.
+                We do not represent tenants, landlords, or property managers.
+                Our role is to provide verified rental performance reports based on submitted and verified information.
+                Rentale does not make rental decisions.
+                Instead, we provide standardized information that helps tenants, landlords, and property managers make more informed leasing decisions.
               </p>
             </div>
           </div>
@@ -445,10 +448,11 @@ export function LandingPage() {
                   Who can use Rentale?
                 </AccordionTrigger>
                 <AccordionContent className="text-slate text-base leading-relaxed font-inter">
-                  Rentale is designed for both proactive tenants who want to
-                  stand out in competitive markets, and independent landlords
-                  who want reliable, standardized data to assess prospective
-                  renters without relying solely on traditional credit scores.
+                  Tenants, landlords, and property managers.
+
+                  Rentale helps tenants build verified rental performance records they can share when applying for a home or apartment.
+
+                  It also helps landlords and property managers review standardized rental performance report so they can make more informed leasing decisions without solely relying on credit scores.
                 </AccordionContent>
               </AccordionItem>
 
@@ -463,8 +467,7 @@ export function LandingPage() {
                 </AccordionTrigger>
                 <AccordionContent className="text-slate text-base leading-relaxed font-inter">
                   Yes, data is securely handled and used only for verification purposes.
-                  You have complete control over who sees your verified report and can revoke access at any
-                  time. We never sell your personal data to third parties.
+                  You have complete control over who sees your verified report. We never sell your personal data to third parties.
                 </AccordionContent>
               </AccordionItem>
 
@@ -489,12 +492,12 @@ export function LandingPage() {
                 data-aos-delay="400"
               >
                 <AccordionTrigger className="text-lg font-medium text-navy hover:text-[#1E3A8A] hover:no-underline transition-colors text-left font-poppins">
-                  Why use Rentale?
+                  Why Rentale?
                 </AccordionTrigger>
                 <AccordionContent className="text-slate text-base leading-relaxed font-inter">
-                  Rentale helps tenants and landlords build trusted, verified
-                  rental records that make rental decisions safer, faster, and
-                  more transparent.
+                  Rentale helps tenants and landlords create and share verified
+                  rental performance records that support safer, faster, and
+                  more transparent rental decisions.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -657,22 +660,7 @@ export function LandingPage() {
                       when required by applicable law.
                     </p>
                     <p>
-                      5. Data security: We take reasonable measures to protect
-                      submitted information. However, no online platform can
-                      guarantee absolute security.
-                    </p>
-                    <p>
-                      6. Pilot stage notice: During this pilot phase, report
-                      generation and verification may include manual review and
-                      validation.
-                    </p>
-                    <p>
-                      7. User rights: Users may request correction or removal of
-                      their submitted information by contacting
-                      hello@rentalehq.com.
-                    </p>
-                    <p>
-                      8. Updates: This policy may be updated as Rentale evolves.
+                      5. Updates: This policy may be updated as Rentale evolves.
                       Continued use of the platform indicates acceptance of
                       updates.
                     </p>
@@ -723,10 +711,7 @@ export function LandingPage() {
                     </p>
                     <p>
                       5. Fees and pilot participation: During the landing-page
-                      and pilot phase, participation may be free or include
-                      optional pilot fees. Any fees, if introduced, will be
-                      clearly disclosed before a user proceeds. No subscription
-                      commitment is required at this stage.
+                      and pilot phase, participation is completely free.
                     </p>
                     <p>
                       6. Limitation of liability: Rentale is not responsible for
