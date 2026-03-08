@@ -123,7 +123,7 @@ export function LandingPage() {
              font-poppins font-medium shadow-sm hover:shadow transition-all 
              whitespace-nowrap"
 >
-          <a href="#neutrality-notice">Create your Rentale Performance Report</a>
+          <a href="#neutrality-notice">Create your Rentale Report</a>
           </Button>
         </div>
       </nav>
@@ -171,7 +171,7 @@ export function LandingPage() {
               shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-0.5"
               >
             <a href="#neutrality-notice" className="flex items-center justify-center text-center">
-            <span className="leading-tight">Create your Rentale Performance Report</span>
+            <span className="leading-tight">Create your Rentale Report</span>
             </a>
             </Button>
                 <Button
@@ -269,7 +269,7 @@ export function LandingPage() {
               {[
                 {
                   title: "Rental Payment Reliability",
-                  desc: "Historical data on payments, patterns, and overall consistency over time.",
+                  desc: "Historical data on payment patterns and overall consistency over time.",
                   icon: <CheckCircle2 className="w-7 h-7" />,
                 },
                 {
@@ -322,9 +322,9 @@ export function LandingPage() {
               </h3>
               <p className="text-[#1E3A8A] font-medium font-inter">
                 Rentale is a neutral platform.
-                We do not represent tenants, landlords, or property managers.
-                Our role is to provide verified rental performance reports based on submitted and verified information.
-                Rentale does not make rental decisions.
+                We do not represent tenants, landlords, or property managers. <br />
+                Our role is to provide verified rental performance reports based on submitted and verified information. <br />
+                Rentale does not make rental decisions. 
                 Instead, we provide standardized information that helps tenants, landlords, and property managers make more informed leasing decisions.
               </p>
             </div>
@@ -421,7 +421,7 @@ export function LandingPage() {
                 Frequently Asked Questions
               </h2>
               <p className="text-slate text-lg font-inter">
-                Everything you need to know about Rentale's platform.
+                Answers to common questions about Rentale.
               </p>
             </div>
 
@@ -456,9 +456,9 @@ export function LandingPage() {
                 <AccordionContent className="text-slate text-base leading-relaxed font-inter">
                   Tenants, landlords, and property managers.
 
-                  Rentale helps tenants build verified rental performance records they can share when applying for a home or apartment.
+                  Rentale helps tenants build verified rental performance reports they can share when applying for a home or apartment.
 
-                  It also helps landlords and property managers review standardized rental performance report so they can make more informed leasing decisions without solely relying on credit scores.
+                  It also helps landlords and property managers review standardized rental performance reports so they can make more informed leasing decisions without solely relying on credit scores.
                 </AccordionContent>
               </AccordionItem>
 
@@ -502,7 +502,7 @@ export function LandingPage() {
                 </AccordionTrigger>
                 <AccordionContent className="text-slate text-base leading-relaxed font-inter">
                   Rentale helps tenants and landlords create and share verified
-                  rental performance records that support safer, faster, and
+                  rental performance reports that support safer, faster, and
                   more transparent rental decisions.
                 </AccordionContent>
               </AccordionItem>
@@ -510,8 +510,8 @@ export function LandingPage() {
 
             <div className="mt-16 p-6 rounded-xl bg-slate-50 border border-slate-100 text-sm text-slate leading-relaxed font-inter">
               <p>
-                <strong>Disclaimer:</strong> Rentale is a neutral rental
-                record platform currently operating in a pilot stage. Reports
+                <strong>Disclaimer:</strong> Rentale is a neutral Rental
+                Report Platform currently operating in a pilot stage. Reports
                 are informational and based on validated data.
               </p>
             </div>
@@ -534,7 +534,7 @@ export function LandingPage() {
               </div>
               <p className="text-slate text-sm leading-relaxed max-w-xs font-inter">
                 The modern standard for rental trust.
-                Verified rental performance for tenants and landlords.
+                Verified rental performance reports for tenants and landlords.
               </p>
               <a
                 href="mailto:hello@rentalehq.com"
@@ -656,7 +656,7 @@ export function LandingPage() {
                     <p>
                       3. How we use information: Information may be used to
                       generate rental performance reports, validate submitted
-                      rental records, improve the platform and user experience,
+                      rental information, improve the platform and user experience,
                       and communicate with users about submissions or updates.
                     </p>
                     <p>
