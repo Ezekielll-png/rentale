@@ -184,7 +184,7 @@ export function LandingPage() {
                 variants={fadeIn}
                 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-navy leading-[1.1] mb-6 tracking-[-0.02em] font-poppins"
               >
-                Trusted Rental Records for <br className="hidden md:block" />
+                Trusted Rental Reports for <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E3A8A] to-blue-600">
                   Tenants & Landlords
                 </span>
