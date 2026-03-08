@@ -47,7 +47,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { useJoinWaitlist } from "@/hooks/use-waitlist";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import TiktokIcon from "@/components/icons/TiktokIcon";
 
 // Animation variants
@@ -69,6 +69,45 @@ export function LandingPage() {
   const { mutate: joinWaitlist, isPending } = useJoinWaitlist();
   const [email, setEmail] = useState("");
   const [confirmed, setConfirmed] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [iframeLoadCount, setIframeLoadCount] = useState(0);
+  const feedbackSectionRef = useRef<HTMLElement>(null);
+
+  // Handle Tenant Form iFrame load events to detect submission
+  // Tenant form has 4 internal sections: initial view + 3 'Next' button clicks = 4 loads
+  // 5th load event indicates successful form submission and redirect
+  const handleTenantIFrameLoad = () => {
+    const iframeElement = document.querySelector(
+      'iframe[src*="1FAIpQLSdRF9X2uvIXTqsUIQ3ud1GaAlW8xsdE6PI63jvpiEK7H_vWkg"]'
+    ) as HTMLIFrameElement | null;
+
+    if (!iframeElement) return;
+
+    setIframeLoadCount((prevCount) => {
+      const newCount = prevCount + 1;
+      // 5th load event indicates successful form submission
+      if (newCount === 5 && iframeElement) {
+        setIsSubmitted(true);
+      }
+      return newCount;
+    });
+  };
+
+  // Scroll to Feedback Form when it becomes visible
+  useEffect(() => {
+    if (isSubmitted && feedbackSectionRef.current) {
+      // Small delay to ensure DOM is fully rendered and CSS transitions are applied
+      setTimeout(() => {
+        const feedbackSection = feedbackSectionRef.current as HTMLElement | null;
+        if (feedbackSection) {
+          feedbackSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 300);
+    }
+  }, [isSubmitted]);
 
   const handleWaitlistSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -354,6 +393,8 @@ export function LandingPage() {
                       maxWidth: "100%",
                       display: "block",
                     }}
+                    onLoad={handleTenantIFrameLoad}
+                    title="Tenant Form"
                   >
                     Loading…
                   </iframe>
@@ -376,8 +417,14 @@ export function LandingPage() {
 
         {/* Feedback Section */}
         <section
+          ref={feedbackSectionRef}
           id="feedback-form"
-          className="py-24 bg-[#0F172A] relative overflow-hidden"
+          className={`py-24 bg-[#0F172A] relative overflow-hidden transition-all duration-500 ${
+            isSubmitted ? "opacity-100" : "opacity-0 invisible"
+          }`}
+          style={{
+            pointerEvents: isSubmitted ? "auto" : "none",
+          }}
         >
           {/* Subtle background glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-[#1E3A8A] opacity-[0.03] blur-[100px] pointer-events-none"></div>
