@@ -117,10 +117,13 @@ export function LandingPage() {
             </a>
           </div>
           <Button
-            asChild
-            className="bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full px-2 font-poppins font-medium shadow-sm hover:shadow transition-all"
-          >
-            <a href="#neutrality-notice">Create your Rentale Performance Report</a>
+          asChild
+          className="bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full 
+             px-3 py-1 text-[10px] sm:text-xs md:text-sm md:px-6 
+             font-poppins font-medium shadow-sm hover:shadow transition-all 
+             whitespace-nowrap"
+>
+          <a href="#neutrality-notice">Create your Rentale Performance Report</a>
           </Button>
         </div>
       </nav>
@@ -152,7 +155,7 @@ export function LandingPage() {
                 variants={fadeIn}
                 className="text-lg md:text-xl text-slate max-w-2xl mb-10 leading-relaxed font-inter"
               >
-                Create and share a trusted rental performance record for landlords and tenants.
+                Create and share a trusted rental performance report for landlords and tenants.
               </motion.p>
 
               <motion.div
@@ -160,14 +163,17 @@ export function LandingPage() {
                 className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
               >
                 <Button
-                  asChild
-                  size="lg"
-                  className="w-full sm:w-auto bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full px-8 h-14 text-base font-poppins font-medium shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5"
-                >
-                  <a href="#neutrality-notice">
-                    Create your Rentale Performance Report <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
-                </Button>
+              asChild
+              size="lg"
+              className="w-full sm:w-auto bg-[#1E3A8A] hover:bg-[#1e3a8a]/90 text-white rounded-full 
+              px-6 sm:px-8 h-auto min-h-[3.5rem] py-4 sm:py-0 
+              text-[14px] sm:text-base font-poppins font-medium 
+              shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-0.5"
+              >
+            <a href="#neutrality-notice" className="flex items-center justify-center text-center">
+            <span className="leading-tight">Create your Rentale Performance Report</span>
+            </a>
+            </Button>
                 <Button
                   asChild
                   variant="outline"
